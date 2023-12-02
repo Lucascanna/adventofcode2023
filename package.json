@@ -1,0 +1,14 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap -b test/*.test.js"
+  },
+  "author": "Luca Scannapieco",
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^18.6.1"
+  }
+}
