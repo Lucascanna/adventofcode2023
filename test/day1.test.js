@@ -90,12 +90,10 @@ tap.test('should return the two-digits number with first and last found digits',
 })
 
 tap.test('should return the sum of the extracted number of each line', mainTest => {
-  const input = `
-1abc2
+  const input = `1abc2
 pqr3stu8vwx
 a1b2c3d4e5f
-treb7uchet
-`
+treb7uchet`
   const actual = day1(input)
   const expected = 142
   mainTest.strictSame(actual, expected)

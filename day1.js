@@ -42,7 +42,6 @@ const extractTwoDigitsNumber = (textLine) => {
     ?.map(digit => numMap[digit] )
   
   if (!foundDigits) {
-    console.log('not found')
     return 0
   }
   return foundDigits[0] * 10 + foundDigits.findLast(() => true)
