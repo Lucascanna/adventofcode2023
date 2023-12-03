@@ -19,8 +19,25 @@ const numMap = {
   '9': 9
 }
 
+const exceptionsMap = {
+  'oneight': 'oneeight',
+  'twone': 'twoone',
+  'threeight': 'threeeight',
+  'fiveight': 'fiveeight',
+  'sevenine': 'sevennine',
+  'eightwo': 'eighttwo',
+  'nineight': 'nineeight'
+}
+
 const extractTwoDigitsNumber = (textLine) => {
-  const foundDigits = textLine
+  const exceptions = Object.keys(exceptionsMap)
+  let curatedTextLine = textLine
+  exceptions.forEach(exc => {
+    if (textLine.includes(exc)) {
+      curatedTextLine = curatedTextLine.replace(exc, exceptionsMap[exc])
+    }
+  })
+  const foundDigits = curatedTextLine
     .match(/[1-9]|one|two|three|four|five|six|seven|eight|nine/g)
     ?.map(digit => numMap[digit] )
   

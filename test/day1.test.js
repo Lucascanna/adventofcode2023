@@ -80,6 +80,12 @@ tap.test('should return the two-digits number with first and last found digits',
     t.strictSame(actual, expected)
     t.end()
   })
+  mainTest.test('overlapping spelled digits', t => {
+    const actual = extractTwoDigitsNumber('oneight')
+    const expected = 18
+    t.strictSame(actual, expected)
+    t.end()
+  })
   mainTest.end()
 })
 
