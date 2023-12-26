@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tap -b test/day2.test.js"
+    "start": "node index.js",
+    "test": "tap -b $(echo \"day$npm_config_giorno/part$npm_config_parte.test.js\")"
   },
   "author": "Luca Scannapieco",
   "license": "ISC",

@@ -46,7 +46,7 @@ const computePower = (textLine) => {
   return fewestCubesMap.red * fewestCubesMap.green * fewestCubesMap.blue
 }
 
-const day2 = (multilineText) => {
+const solve = (multilineText) => {
   return multilineText
     .split('\n')
     .map(computePower)
@@ -56,5 +56,5 @@ const day2 = (multilineText) => {
 module.exports = {
   computeNumberOfPossibleGames,
   computeFewestNumberOfCubes,
-  day2
+  solve,
 }

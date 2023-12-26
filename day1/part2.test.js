@@ -1,5 +1,5 @@
 const tap = require('tap')
-const { extractTwoDigitsNumber, day1 } = require('../day1.js')
+const { extractTwoDigitsNumber, solve } = require('./part2')
 
 tap.test('should return the two-digits number with first and last found digits', mainTest => {
   mainTest.test('digits are first and last char', t => {
@@ -94,7 +94,7 @@ tap.test('should return the sum of the extracted number of each line', mainTest 
 pqr3stu8vwx
 a1b2c3d4e5f
 treb7uchet`
-  const actual = day1(input)
+  const actual = solve(input)
   const expected = 142
   mainTest.strictSame(actual, expected)
   mainTest.end()

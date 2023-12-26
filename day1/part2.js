@@ -47,11 +47,11 @@ const extractTwoDigitsNumber = (textLine) => {
   return foundDigits[0] * 10 + foundDigits.findLast(() => true)
 }
 
-const day1 = (multilineText) => {
+const solve = (multilineText) => {
   return multilineText
     .split('\n')
     .map(extractTwoDigitsNumber)
     .reduce((acc, curr) => acc += curr, 0)
 }
 
-module.exports = { extractTwoDigitsNumber, day1 }
+module.exports = { extractTwoDigitsNumber, solve }
