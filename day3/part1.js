@@ -14,9 +14,6 @@ const computePartsSum = (textLines) => {
         beginIdx += 1
       }
       const endIdx = beginIdx + numberStr.length - 1
-      if (numberStr == '204') {
-        console.log({beginIdx, endIdx})
-      }
       if (hasSymbolToLeft(beginIdx, textLine)) {
         sum += parseInt(numberStr)
         console.log({left: numberStr})
